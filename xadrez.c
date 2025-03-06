@@ -5,8 +5,50 @@
 // O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    // ** Nível Novato
+    int TorreNovato, BispoNovato, RainhaNovato;
+
+    //apresentacao do programa
+    printf("Ola jogador, seja bem vindo ao modo treino!\n");
+    printf("Aqui voce ira aprender a movimentar as peças de Xadrez pelo tabuleiro!\n");
+    printf("\nO tabuleiro de xadrez e composto por 64 casas, divididas em 8 colunas verticais e 8 horizontais.\n");
+    printf("As colunas verticais recebem letras e vao do (A) ao (H).\n");
+    printf("Ja as horizontais recebem numeros, que vao de (1) a (8).\n");
+    
+
+    //inicio
+
+    printf("\nBom, vamos comecar pela Torre, ela se move em 4 direcoes: \n(cima); (baixo); (direita); (esquerda). \nPodendo escolher 1 por jogada e andar quantas casas quiser desde que não tenha outra peça impedindo o seu caminho.\n");
+    printf("Digamos que esteja na casa (A1), canto inferior do tabuleiro, e queira  andar (5) casas para a direita.");
+    printf("vamos tentar?\n \n");
+
+    //movimentaçao da torre
+    TorreNovato = 1;
+    do{
+        
+        printf("-> direita\n");
+        TorreNovato ++;
+
+    } while (TorreNovato <=5);
+
+    printf("\nFizemos os 5 movimentos e saimos da casa (A1) para a (F1).\n");
+
+    printf("\n***********************************************\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
