@@ -10,7 +10,7 @@ int main() {
 
     //apresentacao do programa
     printf("Ola jogador, seja bem vindo ao modo treino!\n");
-    printf("Aqui voce ira aprender a movimentar as peças de Xadrez pelo tabuleiro!\n");
+    printf("Aqui voce ira aprender a movimentar as pecas de Xadrez pelo tabuleiro!\n");
     printf("\nO tabuleiro de xadrez e composto por 64 casas, divididas em 8 colunas verticais e 8 horizontais.\n");
     printf("As colunas verticais recebem letras e vao do (A) ao (H).\n");
     printf("Ja as horizontais recebem numeros, que vao de (1) a (8).\n");
@@ -18,8 +18,9 @@ int main() {
 
     //inicio
 
-    printf("\nBom, vamos comecar pela Torre, ela se move em 4 direcoes: \n(cima); (baixo); (direita); (esquerda). \nPodendo escolher 1 por jogada e andar quantas casas quiser desde que não tenha outra peça impedindo o seu caminho.\n");
-    printf("Digamos que esteja na casa (A1), canto inferior do tabuleiro, e queira  andar (5) casas para a direita.");
+    //conhecendo a torre
+    printf("\nBom, vamos comecar pela Torre, ela se move em 4 direcoes: \n(cima); (baixo); (direita); (esquerda). \nPodendo escolher 1 por jogada e andar quantas casas quiser desde que nao tenha outra peca impedindo o seu caminho.\n");
+    printf("Digamos que a torre esteja na casa (A1), canto inferior do tabuleiro, e queira  andar (5) casas para a direita.\n");
     printf("vamos tentar?\n \n");
 
     //movimentaçao da torre
@@ -35,7 +36,28 @@ int main() {
 
     printf("\n***********************************************\n");
 
+    //conhecendo o bispo
 
+    printf("\nAgora que aprendemos a mover a torre, vamos para o Bispo!\n");
+    printf("Diferente da torre o bispo anda na diagonal.\n");
+    printf("Seus movimentos podem ser descritos da seguinte maneira: \n(cima + esqueda); (cima + direita); (baixo + esqueda); (baixo + direita)\nAssim como a torre, o bispo so pode andar caso não tenha outra peca impedindo seu movimento.\n");
+
+    printf("Digamos que o bispo esteja na casa (A1), canto inferior do tabuleiro, e queira  andar (5) casas para a diagonal superior direita.\n");
+    printf("vamos tentar?\n \n");
+
+    //movimentaçao do bispo
+    BispoNovato = 1;
+
+    while (BispoNovato <=5) {
+        
+        printf("-> cima + direita\n");
+        BispoNovato ++;
+
+    };
+
+    printf("\nFizemos os 5 movimentos e saimos da casa (A1) para a (F6).\n");
+
+    printf("\n***********************************************\n");
 
 
 
