@@ -59,7 +59,24 @@ int main() {
 
     printf("\n***********************************************\n");
 
+    //conhecendo a rainha
+    printf("Agora vamos utilizar a rainha, ela veio por ultimo pois pode efetuar os mesmos movimentos que a torre e o bispo,\nou seja, ela anda tanto na horizontal e vertical, quanto na diagonal desde que nenhuma peca esteja impedindo o seu caminho.\n");
 
+    printf("Digamos que a rainha esteja na casa (H4), lado direito do tabuleiro, e queira  andar (7) casas para a esquerda.\n");//tabuleiro possui 8 casas, apos 7 movimentos voce chega no fim do tabuleiro
+    printf("vamos tentar?\n \n");
+
+    //movimentacao da rainha
+    RainhaNovato=1;
+    for (;RainhaNovato <= 7; RainhaNovato++)
+    {
+        printf("-> esquerda:\n");
+    }
+
+    printf("\nFizemos os 7 movimentos e saimos da casa (H4) para a (A4).\n");
+    printf("Com isso terminamos o desafio de nivel iniciante! te aguardamos no Proximo nivel.\n");
+
+    printf("\n***********************************************\n");
+    printf("\n***********************************************\n");
 
 
 
