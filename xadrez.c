@@ -73,19 +73,41 @@ int main() {
     }
 
     printf("\nFizemos os 7 movimentos e saimos da casa (H4) para a (A4).\n");
-    printf("Com isso terminamos o desafio de nivel iniciante! te aguardamos no Proximo nivel.\n");
+    printf("Com isso terminamos o desafio de nivel iniciante! Aguardamos voce no Proximo nivel.\n");
 
     printf("\n***********************************************\n");
     printf("\n***********************************************\n");
 
 
 
+    // ** Nível Aventureiro - Movimentação do Cavalo
+    int CavalorReta = 1, CavaloCurva = 1;
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    int CavaloAventureiro;
+    //conhecendo o cavalo
+    printf("Para a nossa proxima missao, vamos conhecer o cavalo\n");
+    printf("O cavalo se move em (L), ou seja, ele anda 2 casas em direcao vertical ou horizontal, e por fim, anda mais um casa para o lado\n");
+    printf("Por exemplo: (cima) (cima) (direita)\n");
 
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("Digamos que o cavalo esteja na casa (F5), topo direito do tabuleiro, e queira  efetuar um movimento em L para a casa de baixo na esquerda.\n");
+    printf("Vamos tentar?\n \n");
+
+    for (; CavaloCurva <= 1; CavaloCurva++) {  // Loop externo
+        while (CavalorReta <= 2) {  // Loop interno
+            printf("-> baixo \n");
+            CavalorReta ++;
+        }
+
+        printf("-> esquerda\n");
+    }
+
+    printf("Fizemos o movimento, e saimos da casa (F5) para a casa (E3)");
+    printf("Com isso terminamos o desafio de nivel aventureiro! Aguardamos voce no Proximo nivel.\n");
+
+    printf("\n***********************************************\n");
+    printf("\n***********************************************\n");
+
+
+
 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
