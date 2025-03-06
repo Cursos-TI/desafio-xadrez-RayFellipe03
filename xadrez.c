@@ -91,6 +91,7 @@ int main() {
     printf("Digamos que o cavalo esteja na casa (F5), topo direito do tabuleiro, e queira  efetuar um movimento em L para a casa de baixo na esquerda.\n");
     printf("Vamos tentar?\n \n");
 
+    //movimentacao do cavalo
     for (; CavaloCurva <= 1; CavaloCurva++) {  // Loop externo
         while (CavalorReta <= 2) {  // Loop interno
             printf("-> baixo \n");
