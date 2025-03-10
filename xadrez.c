@@ -2,19 +2,27 @@
 
 // Desafio de Xadrez - MateCheck
 
-void CavaloMov (int CavaloMestre){
+void CavaloMov (int cavaloMestre){
 
+    if(cavaloMestre >0) {
+    for (int CavaloCima =2, CavaloDireita =1; CavaloDireita > 0; CavaloDireita--) {  // Loop externo
+        for (; CavaloCima > 0; CavaloCima--) {  // Loop interno
+            printf("-> cima \n");
+        }
+    printf("-> direita\n");
+    CavaloMov(cavaloMestre-1);
+    }}
 }
 
-void TorreMov (int TorreMestre){
+void TorreMov (){
     
 }
 
-void BispoMov (int BispoMestre){
+void BispoMov (){
     
 }
 
-void Rainhamov (int RainhaMestre){
+void Rainhamov (){
     
 }
 
@@ -149,24 +157,30 @@ int main() {
 
     case 3:
         // Nível Mestre
+        printf("** Bispo: \n"); //nome da peça a se movimentar
+        BispoMov(); //chamada da funcao
+        printf("\n");
 
-        BispoMov(5);
+        printf("** Cavalo: \n"); //nome da peça a se movimentar
+        CavaloMov(1); //chamada da funcao
+        printf("\n");
 
-        CavaloMov(1);
+        printf("** Rainha: \n"); //nome da peça a se movimentar
+        Rainhamov(); //chamada da funcao
+        printf("\n");
 
-        Rainhamov(7);
-
-        TorreMov(5);
-
+        printf("** Torre: \n"); //nome da peça a se movimentar
+        TorreMov(); //chamada da funcao
+        printf("\n");
 
 
         break;
     }
     
 
+    printf("\nFIM\n");
 
-
-
+    printf("\n***********************************************\n");
 
     
     
