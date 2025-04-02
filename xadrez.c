@@ -2,16 +2,26 @@
 
 // Desafio de Xadrez - MateCheck
 
-void CavaloMov (int cavaloMestre){
+void CavaloMov(int cavaloMestre) {
+    if (cavaloMestre > 0) {
+        for (int CavaloDireita = 1; CavaloDireita > 0; CavaloDireita--) {  
+            for (int CavaloCima = 2; CavaloCima > 0; CavaloCima--) {  
+                if (CavaloCima == 1) {
+                    printf("-> cima\n");
+                    break; 
+                }
+                printf("-> cima \n");
+            }
 
-    if(cavaloMestre >0) {
-    for (int CavaloCima =2, CavaloDireita =1; CavaloDireita > 0; CavaloDireita--) {  // Loop externo
-        for (; CavaloCima > 0; CavaloCima--) {  // Loop interno
-            printf("-> cima \n");
+            if (CavaloDireita == 1) {
+                printf("-> direita\n");
+                continue;
+            }
+
+            printf("-> direita\n");
         }
-    printf("-> direita\n");
-    CavaloMov(cavaloMestre-1);
-    }}
+        CavaloMov(cavaloMestre - 1); // Mantém a recursão funcionando corretamente
+    }
 }
 
 void TorreMov (){
