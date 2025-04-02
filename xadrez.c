@@ -19,8 +19,9 @@ void CavaloMov(int cavaloMestre) {
             }
 
             printf("-> direita\n");
+            printf("\n");
         }
-        CavaloMov(cavaloMestre - 1); // Mantém a recursão funcionando corretamente
+        CavaloMov(cavaloMestre -1); // Mantém a recursão funcionando corretamente
     }
 }
 
@@ -28,8 +29,17 @@ void TorreMov (){
     
 }
 
-void BispoMov (){
-    
+void BispoMov (int BispoMestre){
+
+    if (BispoMestre <=0) return; 
+    for (int BispoCima =1, BispoDireita =1; BispoDireita > 0; BispoDireita--) {  // Loop externo
+        for (; BispoCima >= 1; BispoCima--) {  // Loop interno
+            printf("-> cima \n");
+        }
+        printf("-> direita\n");
+        printf("\n");
+        BispoMov(BispoMestre-1);
+    }
 }
 
 void Rainhamov (){
@@ -168,19 +178,24 @@ int main() {
     case 3:
         // Nível Mestre
         printf("** Bispo: \n"); //nome da peça a se movimentar
-        BispoMov(); //chamada da funcao
+        BispoMov(5); //chamada da funcao + numero de movimentos
+        printf("___\n");
         printf("\n");
+    
 
         printf("** Cavalo: \n"); //nome da peça a se movimentar
-        CavaloMov(1); //chamada da funcao
+        CavaloMov(1); //chamada da funcao + numero de movimentos
+        printf("___\n");
         printf("\n");
 
         printf("** Rainha: \n"); //nome da peça a se movimentar
-        Rainhamov(); //chamada da funcao
+        Rainhamov(); //chamada da funcao + numero de movimentos
+        printf("___\n");
         printf("\n");
 
         printf("** Torre: \n"); //nome da peça a se movimentar
-        TorreMov(); //chamada da funcao
+        TorreMov(); //chamada da funcao + numero de movimentos
+        printf("___\n");
         printf("\n");
 
 
