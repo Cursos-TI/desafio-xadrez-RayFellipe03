@@ -25,12 +25,16 @@ void CavaloMov(int cavaloMestre) {
     }
 }
 
-void TorreMov (){
+void TorreMov (int TorreMestre){
+    if (TorreMestre <=0) return; 
+    for (int TorreLado =1 ; TorreLado <= TorreMestre; TorreLado++) {  // Loop externo
+        printf("-> direita\n");
+        printf("\n");
+    }
     
 }
 
 void BispoMov (int BispoMestre){
-
     if (BispoMestre <=0) return; 
     for (int BispoCima =1, BispoDireita =1; BispoDireita > 0; BispoDireita--) {  // Loop externo
         for (; BispoCima >= 1; BispoCima--) {  // Loop interno
@@ -43,12 +47,10 @@ void BispoMov (int BispoMestre){
 }
 
 void Rainhamov (int RainhaMestre){
-
     if (RainhaMestre <=0) return; 
     for (int RainhaLado =1 ; RainhaLado <= RainhaMestre; RainhaLado++) {  // Loop externo
-        printf("-> direita\n");
+        printf("-> esquerda\n");
         printf("\n");
-        BispoMov(RainhaMestre-1);
     }
     
 }
@@ -188,7 +190,6 @@ int main() {
         BispoMov(5); //chamada da funcao + numero de movimentos
         printf("___\n");
         printf("\n");
-    
 
         printf("** Cavalo: \n"); //nome da peça a se movimentar
         CavaloMov(1); //chamada da funcao + numero de movimentos
@@ -196,12 +197,12 @@ int main() {
         printf("\n");
 
         printf("** Rainha: \n"); //nome da peça a se movimentar
-        Rainhamov(5); //chamada da funcao + numero de movimentos
+        Rainhamov(8); //chamada da funcao + numero de movimentos
         printf("___\n");
         printf("\n");
 
         printf("** Torre: \n"); //nome da peça a se movimentar
-        TorreMov(); //chamada da funcao + numero de movimentos
+        TorreMov(5); //chamada da funcao + numero de movimentos
         printf("___\n");
         printf("\n");
 
