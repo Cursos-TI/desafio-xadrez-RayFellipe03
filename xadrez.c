@@ -34,15 +34,22 @@ void BispoMov (int BispoMestre){
     if (BispoMestre <=0) return; 
     for (int BispoCima =1, BispoDireita =1; BispoDireita > 0; BispoDireita--) {  // Loop externo
         for (; BispoCima >= 1; BispoCima--) {  // Loop interno
-            printf("-> cima \n");
+            printf("->  direita\n");
         }
-        printf("-> direita\n");
+        printf("-> cima\n");
         printf("\n");
         BispoMov(BispoMestre-1);
     }
 }
 
-void Rainhamov (){
+void Rainhamov (int RainhaMestre){
+
+    if (RainhaMestre <=0) return; 
+    for (int RainhaLado =1 ; RainhaLado <= RainhaMestre; RainhaLado++) {  // Loop externo
+        printf("-> direita\n");
+        printf("\n");
+        BispoMov(RainhaMestre-1);
+    }
     
 }
 
@@ -189,7 +196,7 @@ int main() {
         printf("\n");
 
         printf("** Rainha: \n"); //nome da peça a se movimentar
-        Rainhamov(); //chamada da funcao + numero de movimentos
+        Rainhamov(5); //chamada da funcao + numero de movimentos
         printf("___\n");
         printf("\n");
 
